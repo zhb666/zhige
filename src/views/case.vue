@@ -2,14 +2,14 @@
 
   <div class="case">
 
-    <div class="coonme_bg animated fadeInLeft">
+    <div class="coonme_bg animated fadeInLeft" data-animate="animated fadeInLeft">
       <img src="../../static/common/images/anli_Bg.png" alt="">
-      <h3 class="animated fadeInLeft">案例</h3>
-      <p class="animated fadeInRight">case</p>
+      <h3 class="animated fadeInLeft" data-animate="animated fadeInLeft">案例</h3>
+      <p class="animated fadeInRight" data-animate="animated fadeInRight">case</p>
     </div>
 
     <div class="animated fadeInUp">
-      <div class="case_list" style="background: #F7F8FA;">
+      <div class="case_list" style="background: #F7F8FA;" data-animate="animated fadeInUp">
         <div class="case_listMain">
           <div class="case_listMain_L">
             <img src="../../static/common/images/logos2.png" alt="">
@@ -25,7 +25,7 @@
         </div>
       </div>
 
-      <div class="case_list">
+      <div class="case_list" data-animate="animated fadeInUp">
         <div class="case_listMain">
           <div class="case_listMain_L">
             <img src="../../static/common/images/logos3.png" alt="">
@@ -41,7 +41,7 @@
         </div>
       </div>
 
-      <div class="case_list" style="background: #F7F8FA;">
+      <div class="case_list" style="background: #F7F8FA;" data-animate="animated fadeInUp">
       <div class="case_listMain">
         <div class="case_listMain_L">
           <img src="../../static/common/images/logos1.png" alt="">
@@ -69,98 +69,313 @@
 </script>
 
 <style scoped>
-  .case {
-    width: 100%;
-    height: auto;
-    overflow: hidden;
+
+  /*device-width: >= 1000px*/
+  @media screen and (min-width: 1000px) {
+
+    .case {
+      width: 100%;
+      height: auto;
+      overflow: hidden;
+    }
+
+    .coonme_bg {
+      width: 100%;
+      height: 495px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .coonme_bg img {
+      width: 100%;
+      height: auto;
+      background-size: cover;
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: -1;
+    }
+
+    .coonme_bg h3 {
+      font-size: 36px;
+      font-weight: normal;
+      text-align: center;
+      margin: 150px 0 10px 0;
+      color: #fff;
+    }
+
+    .coonme_bg p {
+      font-size: 18px;
+      text-align: center;
+      color: #fff;
+      font-family: PingFangSC;
+    }
+
+    .case_list {
+      width: 100%;
+      height: 264px;
+      background: #fff;
+      overflow: hidden;
+    }
+
+    .case_listMain {
+      width: 1068px;
+      height: 220px;
+      margin: 20px auto;
+    }
+
+    .case_listMain_L {
+      float: left;
+      width: 18%;
+      height: 100%;
+      /*background: red;*/
+    }
+
+    .case_listMain_L img {
+      margin-top: 15px;
+    }
+
+    .case_listMain_R {
+      float: left;
+      width: 82%;
+      height: 100%;
+      /*background: yellow;*/
+    }
+
+    .case_listMain_R h3 {
+      font-size: 24px;
+      color: #333;
+      font-weight: normal;
+      margin-top: 15px;
+    }
+
+    .case_listMain_R p {
+      font-size: 16px;
+      color: #666666;
+      margin-top: 8px;
+    }
+
+    .case_listMain_R div {
+      width: 100%;
+      height: 30px;
+      margin-top: 6px;
+      color: #333333;
+      font-size: 16px;
+    }
+
+    .case_listMain_R div img {
+      vertical-align: top;
+      margin: 2px 8px 0 0;
+    }
+
   }
 
-  .coonme_bg {
-    width: 100%;
-    height: 264px;
-    overflow: hidden;
-    position: relative;
+  /*device-width:400px-1000px*/
+  @media screen and (min-width: 450px) and (max-width: 1000px) {
+
+    .case {
+      width: 100%;
+      height: auto;
+      overflow: hidden;
+    }
+
+    .coonme_bg {
+      width: 100%;
+      height: 495px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .coonme_bg img {
+      width: 100%;
+      height: auto;
+      background-size: cover;
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: -1;
+    }
+
+
+    .coonme_bg h3 {
+      font-size: 36px;
+      font-weight: normal;
+      text-align: center;
+      margin: 130px 0 10px 0;
+      color: #fff;
+    }
+
+    .coonme_bg p {
+      font-size: 18px;
+      text-align: center;
+      color: #fff;
+      font-family: PingFangSC;
+    }
+
+    .case_list {
+      width: 100%;
+      height: 264px;
+      background: #fff;
+      overflow: hidden;
+    }
+
+    .case_listMain {
+      width: 1068px;
+      height: 220px;
+      margin: 20px auto;
+    }
+
+    .case_listMain_L {
+      float: left;
+      width: 18%;
+      height: 100%;
+      /*background: red;*/
+    }
+
+    .case_listMain_L img {
+      margin-top: 15px;
+    }
+
+    .case_listMain_R {
+      float: left;
+      width: 82%;
+      height: 100%;
+      /*background: yellow;*/
+    }
+
+    .case_listMain_R h3 {
+      font-size: 24px;
+      color: #333;
+      font-weight: normal;
+      margin-top: 15px;
+    }
+
+    .case_listMain_R p {
+      font-size: 16px;
+      color: #666666;
+      margin-top: 8px;
+    }
+
+    .case_listMain_R div {
+      width: 100%;
+      height: 30px;
+      margin-top: 6px;
+      color: #333333;
+      font-size: 16px;
+    }
+
+    .case_listMain_R div img {
+      vertical-align: top;
+      margin: 2px 8px 0 0;
+    }
+
   }
 
-  .coonme_bg img {
-    width: 100%;
-    height: auto;
-    background-size: cover;
-    position: absolute;
-    left: 0;
-    top: 0;
-    z-index: -1;
+  /*device-width: <= 400px*/
+  @media screen and (max-width: 450px) {
+
+    .case {
+      width: 100%;
+      height: auto;
+      overflow: hidden;
+    }
+
+    .coonme_bg {
+      width: 16rem;
+      height: 12rem;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .coonme_bg img {
+      width: auto;
+      height: 100%;
+      background-size: cover;
+      position: absolute;
+      left: -50%;
+      top: 0;
+      margin-left: -8rem;
+      z-index: -1;
+    }
+
+    .coonme_bg h3 {
+      font-size: 36px;
+      font-weight: normal;
+      text-align: center;
+      margin: 100px 0 10px 0;
+      color: #fff;
+    }
+
+    .coonme_bg p {
+      font-size: 18px;
+      text-align: center;
+      color: #fff;
+      font-family: PingFangSC;
+    }
+
+    .case_list {
+      width: 16rem;
+      height: auto;
+      background: #fff;
+      overflow: hidden;
+    }
+
+    .case_listMain {
+      width: 16rem;
+      height: auto;
+      overflow: hidden;
+      padding: 0 0 .5rem 0;
+      margin: 20px auto;
+      position: relative;
+    }
+
+    .case_listMain_L {
+      width: 2rem;
+      height: 2rem;
+      position: absolute;
+      top: .2rem;
+      left: .8rem;
+    }
+
+    .case_listMain_L img {
+      width: 2rem;
+      height: 2rem;
+    }
+
+    .case_listMain_R {
+      width: 92%;
+      height: 100%;
+      margin: 0 auto;
+    }
+
+    .case_listMain_R h3 {
+      font-size: 24px;
+      color: #333;
+      font-weight: normal;
+      margin-top: 15px;
+      text-align: right;
+    }
+
+    .case_listMain_R p {
+      font-size: .7rem;
+      color: #666666;
+      margin-top: .5rem;
+    }
+
+    .case_listMain_R div {
+      width: 100%;
+      height: 30px;
+      margin-top: 6px;
+      color: #333333;
+      font-size: 16px;
+    }
+
+    .case_listMain_R div img {
+      vertical-align: top;
+      margin: 2px 8px 0 0;
+    }
+
   }
 
-  .coonme_bg h3 {
-    font-size: 36px;
-    font-weight: normal;
-    text-align: center;
-    margin: 100px 0 10px 0;
-    color: #fff;
-  }
 
-  .coonme_bg p {
-    font-size: 18px;
-    text-align: center;
-    color: #fff;
-    font-family: PingFangSC;
-  }
-
-  .case_list {
-    width: 100%;
-    height: 264px;
-    background: #fff;
-    overflow: hidden;
-  }
-
-  .case_listMain {
-    width: 1068px;
-    height: 220px;
-    margin: 20px auto;
-  }
-
-  .case_listMain_L {
-    float: left;
-    width: 18%;
-    height: 100%;
-    /*background: red;*/
-  }
-
-  .case_listMain_L img {
-    margin-top: 15px;
-  }
-
-  .case_listMain_R {
-    float: left;
-    width: 82%;
-    height: 100%;
-    /*background: yellow;*/
-  }
-
-  .case_listMain_R h3 {
-    font-size: 24px;
-    color: #333;
-    font-weight: normal;
-    margin-top: 15px;
-  }
-
-  .case_listMain_R p {
-    font-size: 16px;
-    color: #666666;
-    margin-top: 8px;
-  }
-
-  .case_listMain_R div {
-    width: 100%;
-    height: 30px;
-    margin-top: 6px;
-    color: #333333;
-    font-size: 16px;
-  }
-
-  .case_listMain_R div img {
-    vertical-align: top;
-    margin: 2px 8px 0 0;
-  }
 </style>

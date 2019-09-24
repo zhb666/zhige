@@ -9,6 +9,7 @@ import 'font-awesome/css/font-awesome.min.css'
 import 'element-ui/lib/theme-chalk/index.css'
 
 
+
 Vue.config.productionTip = false;
 Vue.use(ElementUI);
 Vue.use(Vuex)
@@ -22,7 +23,7 @@ import router from './router'
 import store from "./store"
 import filter from "./filter"
 import App from './App'
-import '../static/common/js/main'
+
 
 router.beforeEach((to, from, next) => {
   if (to.matched.some(record => record.meta.requireAuth)) {  // 判断该路由是否需要登录权限
@@ -46,6 +47,10 @@ router.beforeEach((to, from, next) => {
     document.title = to.meta.title
     next();
   }
+})
+
+router.afterEach((to,from,next) => {
+  $('html body').scrollTop(0)
 })
 
 new Vue({
